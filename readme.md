@@ -1,8 +1,4 @@
-Of course. Here is a complete set of setup instructions formatted perfectly for your `README.md` file. You can copy and paste the entire block below.
-
------
-
-## 🚀 Setup and Installation
+Setup and Installation
 
 Follow these steps to set up the project on your local machine.
 
