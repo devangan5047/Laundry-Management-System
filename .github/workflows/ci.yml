@@ -1,0 +1,20 @@
+name: PHP Syntax Check
+
+# This action runs on every push to the 'main' branch
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  php-lint:
+    name: Check PHP Syntax
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Get the code from your repository
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Step 2: Run the PHP syntax checker on all .php files
+    - name: Run PHP Lint
+      run: find . -type f -name "*.php" -print0 | xargs -0 -n1 -P4 php -l
